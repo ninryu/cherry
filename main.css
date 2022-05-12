@@ -38,6 +38,7 @@
     background-size: cover;
 }
 .window-bg {
+    background-image: url("resources/images/window.png");
     height: 485px;
     width: 960px;
     background-position: center;
