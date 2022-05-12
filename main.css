@@ -1,13 +1,13 @@
 /*Most easy/basic changes can be done up here in the root area, edit the rest if you know what it does.*/
 :root{
---stripebackground:#e2c8d4;         /*The color of the small stripe just under the header*/
---windowbackground: #d0a4af;        /*The color of the background of the main window main area.*/
+--stripebackground:#f3c4c4;         /*The color of the small stripe just under the header*/
+--windowbackground: #fff6f6;        /*The color of the background of the main window main area.*/
 --maintextcolor:#000;               /*The color of the text in the main area.*/
---headercolor:#fff;                 /*The color of the text in the header/title.*/
+--headercolor:#ffff;                 /*The color of the text in the header/title.*/
 --linktextcolor:var(--maintextcolor); /*This line means that the links will have the same color as the normal text in the main area of the window. Change if you want different colors.*/
---backgroundImageUrl:url("resources/images/background.jpg");  /*The URL to the image you want to use as background.*/
---focusImageUrl:url("resources/images/wave.png");   /*The URL to the image you want to use for the foreground.*/
---backgroundBlur:blur(2px);                           /*Change how blurry the background is. Higher number is more blurry.*/
+--backgroundImageUrl:url("resources/images/pexels-j-lee-6830332.png");  /*The URL to the image you want to use as background.*/
+--focusImageUrl:url("resources/images/Lq4Mewt.png");   /*The URL to the image you want to use for the foreground.*/
+--backgroundBlur:blur(0px);                           /*Change how blurry the background is. Higher number is more blurry.*/
 --backgroundBorder:#000;                           /*If you have a blurry background, set the color of the border around the image to fit it here.*/
 --letterSpace:2px;                                    /*Define how far letters are spaced from each other in pixels.*/
 /* The font style doesn't seem to work as variable defined here. If you want to change the font, scroll to the bottom of the document to change the path.*/
@@ -15,25 +15,23 @@
 /* These are the font sizes for every element with text respectively:*/
 --windowtitlefontsize:17px;           /*Font size used by the window title and clock*/
 --windowsubtitlefontsize:17px;        /*Font size used by the subtitle*/
---categorytitlefontsize:25px;         /*Font size used by the category titles*/
+--categorytitlefontsize:23px;         /*Font size used by the category titles*/
 --categorycontentfontsize:15px;       /*Font size used by the category contents*/
 
-/* The following settings are for the pixel overlay effect:*/
---pixeloverlay-exists:visible;        /*Activate or deactivate the "pixel effect" overlay. Set to 'visible' to activate, set to 'hidden' to deactivate. When set to 'hidden' the other settings in this category don't matter.*/
---pixeloverlay-itensity:0.1;          /*How intense the overlay should be. Float between 0 and 1, but recommended range is more between 0 and 0.3. Higher values makes startpage darker.*/
---pixeloverlay-resolution:1;          /*A multiplier for the "pixel effect" size. 1 is default, higher means "bigger" pixels. If you use non whole numbers the probability of moiré patterns forming (and looking badly) increases a lot.*/
+/* The following settings are for the pixel overlay effect:
+--pixeloverlay-exists:visible;        Activate or deactivate the "pixel effect" overlay. Set to 'visible' to activate, set to 'hidden' to deactivate. When set to 'hidden' the other settings in this category don't matter.
+--pixeloverlay-itensity:0.1;          How intense the overlay should be. Float between 0 and 1, but recommended range is more between 0 and 0.3. Higher values makes startpage darker.
+--pixeloverlay-resolution:1;          A multiplier for the "pixel effect" size. 1 is default, higher means "bigger" pixels. If you use non whole numbers the probability of moiré patterns forming (and looking badly) increases a lot.*/
 
-/* The following setting are for the vignette overlay effect:*/
---vignetteoverlay-exists:visible;     /*Activate or deactivate the "vignette effect" overlay. Set to 'visible' to activate, set to 'hidden' to deactivate. When set to 'hidden' the other settings in this category don't matter.*/
---vignetteoverlay-intensity:0.5;      /*How intense the overlay should be. Float between 0 and 1, but recommended range is between 0 and 0.5. Higher values make the vignette much darker. */
+/* The following setting are for the vignette overlay effect:
+--vignetteoverlay-exists:visible;     Activate or deactivate the "vignette effect" overlay. Set to 'visible' to activate, set to 'hidden' to deactivate. When set to 'hidden' the other settings in this category don't matter.
+--vignetteoverlay-intensity:0.5;      /*How intense the overlay should be. Float between 0 and 1, but recommended range is between 0 and 0.5. Higher values make the vignette much darker. 
 --vignetteoverlay-size:50%;           /*How big the "radius" of the vignette should be. It is minimal at 0% and as big as the screen (and thus invisible) at 100%. Accepts % values. */
 }
 /*Everything below here (maybe except the font) is normal css and far more likely to break things if you edit it.*/
 
 .bg-image {
     background-image: var(--backgroundImageUrl);
-    filter: var(--backgroundBlur);
-    -webkit-filter: var(--backgroundBlur);
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -53,6 +51,7 @@
 }
 #clock{
   text-align: right;
+  font-style: bold;
   position: relative;
   top: 3px;
   right: 5px;
@@ -101,7 +100,7 @@
 .windowbackgroundarea1{
   position: inherit;
   width: 606px;
-  height: 26px;
+  height: 40px;
   left:349px;
   top:34px;
   background-color: var(--stripebackground);
@@ -135,8 +134,9 @@
   width:605px;
   position:relative;
   text-align: center;
-  font-weight: lighter;
-  margin-top: 5px;
+  font-weight: light;
+  font-style: italic;
+  margin-top: 16px;
 }
 .pixeloverlay{
   width: 100%;
@@ -169,13 +169,13 @@ a{
 body, html {
     height: 100%;
     margin: 0;
-    font-family: w95;
+    font-family: JetBrains Mono;
     color:var(--maintextcolor);
     position: center;
     letter-spacing:var(--letterSpace);
     background: var(--backgroundBorder);
 }
   @font-face {
-    font-family: "w95";
-    src: url('resources/style/w95fa.woff');
+    font-family: "JetBrains Mono";
+    url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono@2.002/web/woff/JetBrainsMono-Regular.woff');
 }
