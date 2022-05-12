@@ -16,20 +16,18 @@
         <div class="windowbackgroundarea2">
         <div class="centerDivs">
             <div class="category">
-                <div class="categorytitle">Music</div>
-                <div class="categorycontent"><a href="https://music.youtube.com/">Youtube</a> - <a href="">AudioLibrary</a> - <a href="">Radio</a></div>
-                <div class="categorytitle">Dev</div>
-                <div class="categorycontent"><a href="https://gitlab.com">Gitlab</a> - <a href="https://github.com">Github</a></div>
-                <div class="categorytitle">Sources</div>
-                <div class="categorycontent"><a href="https://pixabay.com/photos/blossom-pink-garden-nature-4151081/">Photo1</a> - <a href="https://fontsarena.com/w95fa-by-fontsarena/">Font</a> - <a href="https://pixabay.com/illustrations/picture-woodblock-printing-woodcut-1247354/">Photo2</a> - <a href="https://pixabay.com/">Images</a></div>
-                <div class="categorytitle">Private</div>
-                <div class="categorycontent"><a href=" ">Email</a> - <a href="">Homeserver</a> - <a href="">Email2</a> - <a href="">Photos</a></div><div class="categorycontent"><a href="">Music projects</a> - <a href="">CAD files</a> - <a href="">Todo list</a> - <a href="">Food</a></div>
+                <div class="categorytitle">Social</div>
+                <div class="categorycontent"><a href="https://discord.com/channels/@me">Discord</a>-<a href="https://twitter.com/home">Twitter</a>-<a href="https://www.youtube.com/feed/subscriptions">Youtube</a></div>
+                <div class="categorytitle">Media</div>
+                <div class="categorycontent"><a href="https://www.pixiv.net/en/">Pixiv</a>-<a href="https://www.deviantart.com/ninryu">Deviantart</a>-<a href="https://player.fm/ninryu/subs/all">Player.fm</a></div>
+                <div class="categorytitle">Anime&Manga</div>
+                <div class="categorycontent"><a href="https://anilist.co/home">Anilist</a>-<a href="https://animetosho.org/">Anime Tosho</a>-<a href="https://dynasty-scans.com/">Dynasty</a>
+                <div class="categorytitle">Personal</div>
+                <div class="categorycontent"><a href="https://mail.protonmail.com/u/0/inbox">Mail</a>-<a href="https://github.com/">Github</a></div>
             </div>
         </div>
         </div>
     </div>
-    <div class="pixeloverlay"></div>
-    <div class="vignette"></div>
     <script>
         var clock=document.getElementById("clock");
         function updateClock(){
@@ -37,17 +35,13 @@
             date.setHours(date.getHours()+0)
             var hours = date.getHours().toString();
             var minutes = date.getMinutes().toString();
-            var seconds = date.getSeconds().toString();
             if (hours.length==1){
                 hours="0"+hours
             }
             if (minutes.length==1){
                 minutes="0"+minutes
             }
-            if (seconds.length==1){
-                seconds="0"+seconds
-            }
-            clock.innerHTML=hours+":"+minutes+":"+seconds;
+            clock.innerHTML=hours+":"+minutes;
         }
         updateClock();
         setInterval(updateClock,1000);
