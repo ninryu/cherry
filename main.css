@@ -179,3 +179,6 @@ body, html {
     font-family: "JetBrains Mono";
     url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono@2.002/web/woff/JetBrainsMono-Regular.woff');
 }
+a:hover {
+  color: #a6dddb;
+}
